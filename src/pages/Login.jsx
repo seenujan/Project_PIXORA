@@ -18,9 +18,16 @@ export default function Login() {
     <div style={{ textAlign: "center", padding: 50 }}>
       <Header />
       <h1>Login</h1>
-      <form onSubmit={handleLogin} style={{ maxWidth: "400px", margin: "0 auto", textAlign: "left" }}>
+      <form
+        onSubmit={handleLogin}
+        style={{ maxWidth: "400px", margin: "0 auto", textAlign: "left" }}
+      >
         <div style={{ marginBottom: "5px" }}>
-          <label style={{ display: "block", marginBottom: "5px", fontWeight: "bold" }}>Email</label>
+          <label
+            style={{ display: "block", marginBottom: "5px", fontWeight: "bold" }}
+          >
+            Email
+          </label>
           <input
             type="email"
             value={email}
@@ -30,7 +37,11 @@ export default function Login() {
           />
         </div>
         <div style={{ marginBottom: "5px" }}>
-          <label style={{ display: "block", marginBottom: "5px", fontWeight: "bold" }}>Password</label>
+          <label
+            style={{ display: "block", marginBottom: "5px", fontWeight: "bold" }}
+          >
+            Password
+          </label>
           <input
             type="password"
             value={password}
@@ -43,10 +54,14 @@ export default function Login() {
           <Button text="Login" onClick={handleLogin} />
         </div>
       </form>
-      <p style={{ marginTop: "20px" }}>
-        Don't have an account? <Link to="/signup" style={{ color: "#2600ffff" }}>Sign Up</Link>
-      </p>
-      
+
+      <p style={{ marginTop: "20px" }}>Don&apos;t have an account?</p>
+      <div style={{ marginTop: "10px" }}>
+        {/* Sign Up as button instead of hyperlink */}
+        <Link to="/signup" style={{ textDecoration: "none" }}>
+          <Button text="Sign Up" />
+        </Link>
+      </div>
     </div>
   );
 }
@@ -56,5 +71,5 @@ const inputStyle = {
   padding: "10px",
   borderRadius: "5px",
   border: "1px solid #0288d1",
-  fontSize: "16px"
+  fontSize: "16px",
 };

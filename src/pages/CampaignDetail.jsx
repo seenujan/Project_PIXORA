@@ -6,7 +6,7 @@ import Button from "../components/Button";
 
 export default function CampaignDetail() {
   const { id } = useParams();
-  const campaign = campaigns.find(c => c.id == id);
+  const campaign = campaigns.find((c) => c.id == id);
 
   return (
     <div>
@@ -14,9 +14,20 @@ export default function CampaignDetail() {
       <h1>{campaign.title}</h1>
       <p>Location: {campaign.location}</p>
       <p>Date: {campaign.date}</p>
-      <Button text="Register" onClick={() => alert("Registered for campaign (mock)!")} />
-      <br />
-      <Link to="/volunteering">Back to Volunteering</Link>
+
+      <div style={{ marginTop: "15px" }}>
+        <Button
+          text="Register"
+          onClick={() => alert("Registered for campaign (mock)!")}
+        />
+      </div>
+
+      {/* Back button instead of hyperlink */}
+      <div style={{ marginTop: "15px" }}>
+        <Link to="/volunteering" style={{ textDecoration: "none" }}>
+          <Button text="Back to Volunteering" />
+        </Link>
+      </div>
     </div>
   );
 }

@@ -21,27 +21,42 @@ export default function Onboarding() {
       <p>Select your interests to personalize your experience:</p>
       <div>
         <label>
-          <input type="checkbox" checked={interests.plastic} onChange={() => toggleInterest("plastic")} />
+          <input
+            type="checkbox"
+            checked={interests.plastic}
+            onChange={() => toggleInterest("plastic")}
+          />
           Plastic Reduction
         </label>
       </div>
       <div>
         <label>
-          <input type="checkbox" checked={interests.marineLife} onChange={() => toggleInterest("marineLife")} />
+          <input
+            type="checkbox"
+            checked={interests.marineLife}
+            onChange={() => toggleInterest("marineLife")}
+          />
           Marine Life
         </label>
       </div>
       <div>
         <label>
-          <input type="checkbox" checked={interests.beachCleanups} onChange={() => toggleInterest("beachCleanups")} />
+          <input
+            type="checkbox"
+            checked={interests.beachCleanups}
+            onChange={() => toggleInterest("beachCleanups")}
+          />
           Beach Cleanups
         </label>
       </div>
       <br />
-      <Link to="/home">
-        <Button text="Finish Onboarding" />
-      </Link>
-      
+
+      {/* Finish Onboarding link changed to Button */}
+      <div style={{ marginTop: "20px" }}>
+        <Link to="/home" style={{ textDecoration: "none" }}>
+          <Button text="Finish Onboarding" />
+        </Link>
+      </div>
     </div>
   );
 }

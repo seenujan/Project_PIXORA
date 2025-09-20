@@ -16,8 +16,13 @@ export default function MissionDetail() {
       <p>Points: {mission.points}</p>
       <Button text="Mark Complete" onClick={() => alert("Mission Completed! (Mock)")} />
       <br />
-      <Link to="/home">Back to Home</Link>
-      
+
+      {/* Back button instead of hyperlink */}
+      <div style={{ marginTop: "20px" }}>
+        <Link to="/home" style={{ textDecoration: "none" }}>
+          <Button text="Back to Home" />
+        </Link>
+      </div>
     </div>
   );
 }
