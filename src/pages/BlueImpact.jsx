@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import ProgressBar from "../components/ProgressBar"; 
 import { Link } from "react-router-dom";
 
@@ -17,7 +16,7 @@ export default function BlueImpact() {
       <Link to="/achievements">View Achievements</Link>
       <br />
       <Link to="/home">Back to Home</Link>
-      <Footer />
+      
     </div>
   );
 }

@@ -12,6 +12,40 @@ body {
 }
 
 /* Header */
+
+header, footer {
+  background: #0288d1; /* solid blue */
+  color: white;
+}
+
+header h1, footer p, footer a {
+  color: white;
+}
+
+header nav a:hover, footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile-friendly hamburger menu dropdown */
+header div a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger menu items */
+header .menu-item {
+  display: block;
+  padding: 8px 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+header .menu-item:hover {
+  background-color: #2191d2;
+}
+
+
 header {
   background-color: #0288d1;
   color: white;
@@ -178,4 +212,24 @@ div {
   footer {
     font-size: 14px;
   }
+}
+
+
+/* Ensure html/body/root take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex layout for the app */
+.app-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content grows to push footer down */
+.page-content {
+  flex: 1;
 }

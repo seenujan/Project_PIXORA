@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 export default function ImpactTimeline() {
   const mockTimeline = [
@@ -18,7 +17,7 @@ export default function ImpactTimeline() {
         {mockTimeline.map((item, idx) => <li key={idx}>{item}</li>)}
       </ul>
       <Link to="/blueimpact">Back to My Blue Impact</Link>
-      <Footer />
+      
     </div>
   );
 }

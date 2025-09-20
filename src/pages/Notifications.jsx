@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 export default function Notifications() {
@@ -18,7 +17,7 @@ export default function Notifications() {
         {mockNotifications.map((n, idx) => <li key={idx}><Link to="/notification-detail">{n}</Link></li>)}
       </ul>
       <Link to="/home">Back to Home</Link>
-      <Footer />
+      
     </div>
   );
 }

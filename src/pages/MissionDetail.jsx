@@ -2,7 +2,6 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { missions } from "../mockData/missions";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Button from "../components/Button";
 
 export default function MissionDetail() {
@@ -18,7 +17,7 @@ export default function MissionDetail() {
       <Button text="Mark Complete" onClick={() => alert("Mission Completed! (Mock)")} />
       <br />
       <Link to="/home">Back to Home</Link>
-      <Footer />
+      
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 import { species } from "../mockData/species";
 
 export default function VirtualOcean() {
@@ -15,7 +15,7 @@ export default function VirtualOcean() {
         ))}
       </ul>
       <a href="/blueimpact">Back to My Blue Impact</a>
-      <Footer />
+  
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Button from "../components/Button";
 
 export default function GoalSetting() {
@@ -14,7 +13,6 @@ export default function GoalSetting() {
       <Button text="Save Goal" onClick={() => alert(`Goal saved: ${goal} (mock)`)} />
       <br />
       <a href="/profile">Back to Profile</a>
-      <Footer />
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Button from "../components/Button";
 
 export default function Onboarding() {
@@ -42,7 +41,7 @@ export default function Onboarding() {
       <Link to="/home">
         <Button text="Finish Onboarding" />
       </Link>
-      <Footer />
+      
     </div>
   );
 }

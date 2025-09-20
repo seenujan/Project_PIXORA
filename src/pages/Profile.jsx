@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 export default function Profile() {
@@ -13,7 +12,7 @@ export default function Profile() {
       <Link to="/goal-setting">Set Goals</Link>
       <br />
       <Link to="/home">Back to Home</Link>
-      <Footer />
+      
     </div>
   );
 }

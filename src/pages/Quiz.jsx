@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { quizzes } from "../mockData/quizzes";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 export default function Quiz() {
   const { id } = useParams();
@@ -28,7 +27,7 @@ export default function Quiz() {
         </div>
       ))}
       <Link to={`/quiz-result/${id}`}>Submit</Link>
-      <Footer />
+      
     </div>
   );
 }

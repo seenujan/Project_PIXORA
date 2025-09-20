@@ -2,7 +2,7 @@ import React from "react";
 import { campaigns } from "../mockData/campaigns";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 import Card from "../components/Card";
 
 export default function Volunteering() {
@@ -15,7 +15,7 @@ export default function Volunteering() {
           <Link to={`/campaign/${c.id}`}>View Details</Link>
         </Card>
       ))}
-      <Footer />
+      
     </div>
   );
 }

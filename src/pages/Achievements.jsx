@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 export default function Achievements() {
   const mockAchievements = ["Coral Protector Badge", "Turtle Saver Badge", "Ocean Quiz Master"];
@@ -14,7 +14,7 @@ export default function Achievements() {
         {mockAchievements.map((a, idx) => <li key={idx}>{a}</li>)}
       </ul>
       <Link to="/blueimpact">Back to My Blue Impact</Link>
-      <Footer />
+      
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { quizzes } from "../mockData/quizzes";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 export default function QuizSelection() {
   return (
@@ -15,7 +15,7 @@ export default function QuizSelection() {
           <Link to={`/quiz/${q.id}`}>Start Quiz</Link>
         </div>
       ))}
-      <Footer />
+      
     </div>
   );
 }

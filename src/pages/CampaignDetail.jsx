@@ -2,7 +2,6 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { campaigns } from "../mockData/campaigns";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Button from "../components/Button";
 
 export default function CampaignDetail() {
@@ -18,7 +17,6 @@ export default function CampaignDetail() {
       <Button text="Register" onClick={() => alert("Registered for campaign (mock)!")} />
       <br />
       <Link to="/volunteering">Back to Volunteering</Link>
-      <Footer />
     </div>
   );
 }
