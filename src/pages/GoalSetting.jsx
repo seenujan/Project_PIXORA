@@ -44,7 +44,7 @@ export default function GoalSetting() {
 
         <Button 
           text="Save Goal" 
-          onClick={() => alert(`Goal saved: ${goal} (mock)`)} 
+          onClick={() => alert(`Goal saved succesfully! ${goal}`)} 
         />
 
         {/* Back to Profile */}

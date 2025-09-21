@@ -46,7 +46,7 @@ export default function MissionDetail() {
         <div style={{ marginBottom: "20px" }}>
           <Button
             text="Mark Complete"
-            onClick={() => alert("Mission Completed! (Mock)")}
+            onClick={() => alert("Mission Completed!")}
           />
         </div>
 

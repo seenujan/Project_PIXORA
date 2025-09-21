@@ -6,7 +6,7 @@ import Button from "../components/Button";
 
 export default function CampaignDetail() {
   const { id } = useParams();
-  const campaign = campaigns.find((c) => c.id === id);
+  const campaign = campaigns.find((c) => c.id == id);
 
   if (!campaign) {
     return (
