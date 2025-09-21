@@ -8,9 +8,14 @@ export default function Signup() {
   const [name, setName] = useState("Pixora");
   const [email, setEmail] = useState("Pixora@example.com");
   const [password, setPassword] = useState("password123");
+  const [confirmPassword, setConfirmPassword] = useState("password123");
 
   const handleSignup = (e) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
     // Mock signup, then go to Home
     navigate("/home");
   };
@@ -41,6 +46,7 @@ export default function Signup() {
             style={inputStyle}
           />
         </div>
+
         <div style={{ marginBottom: "10px" }}>
           <label
             style={{
@@ -59,6 +65,7 @@ export default function Signup() {
             style={inputStyle}
           />
         </div>
+
         <div style={{ marginBottom: "10px" }}>
           <label
             style={{
@@ -77,6 +84,27 @@ export default function Signup() {
             style={inputStyle}
           />
         </div>
+
+        {/* Confirm Password Field */}
+        <div style={{ marginBottom: "10px" }}>
+          <label
+            style={{
+              display: "block",
+              marginBottom: "5px",
+              fontWeight: "bold",
+            }}
+          >
+            Confirm Password
+          </label>
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+            style={inputStyle}
+          />
+        </div>
+
         <div style={{ textAlign: "center", marginTop: "10px" }}>
           <Button text="Sign Up" onClick={handleSignup} />
         </div>
@@ -84,7 +112,10 @@ export default function Signup() {
 
       <p style={{ marginTop: "20px" }}>Already have an account?</p>
       <div style={{ marginTop: "10px" }}>
-        <Link to="/login" style={{ color: "#074d86ff", textDecoration: "underline" }}>
+        <Link
+          to="/login"
+          style={{ color: "#074d86ff", textDecoration: "underline" }}
+        >
           Login
         </Link>
       </div>
