@@ -5,7 +5,7 @@ import Button from "../components/Button";
 
 export default function Login() {
   const navigate = useNavigate(); // navigation hook
-  const [email, setEmail] = useState("jane@example.com");
+  const [email, setEmail] = useState("Pixora@example.com");
   const [password, setPassword] = useState("password123");
 
   const handleLogin = (e) => {
@@ -56,10 +56,10 @@ export default function Login() {
       </form>
 
       <p style={{ marginTop: "20px" }}>Don&apos;t have an account?</p>
+      {/* Sign Up as hyperlink */}
       <div style={{ marginTop: "10px" }}>
-        {/* Sign Up as button instead of hyperlink */}
-        <Link to="/signup" style={{ textDecoration: "none" }}>
-          <Button text="Sign Up" />
+        <Link to="/signup" style={{ color: "#074d86ff", textDecoration: "underline", fontWeight: "bold" }}>
+          Sign Up
         </Link>
       </div>
     </div>
@@ -70,6 +70,6 @@ const inputStyle = {
   width: "100%",
   padding: "10px",
   borderRadius: "5px",
-  border: "1px solid #0288d1",
+  border: "1px solid #cbdce5ff",
   fontSize: "16px",
 };

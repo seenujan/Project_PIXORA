@@ -32,9 +32,6 @@ import CampaignConfirm from "./pages/CampaignConfirm";
 import BlueImpact from "./pages/BlueImpact";
 import ImpactTimeline from "./pages/ImpactTimeline";
 import Achievements from "./pages/Achievements";
-import VirtualOcean from "./pages/VirtualOcean";
-import SpeciesInfo from "./pages/SpeciesInfo";
-import UnlockSpecies from "./pages/UnlockSpecies";
 
 // Profile / Settings
 import Profile from "./pages/Profile";
@@ -42,16 +39,17 @@ import GoalSetting from "./pages/GoalSetting";
 
 // Notifications
 import Notifications from "./pages/Notifications";
-import NotificationDetail from "./pages/NotificationDetail";
 
-// Footer (separate)
+// Footer
 import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <Router>
+      {/* Flex container ensures footer stays at the bottom */}
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-        {/* Page content grows and pushes footer down */}
+        
+        {/* Page content grows to push footer down */}
         <div style={{ flex: 1 }}>
           <Routes>
             {/* Splash / Onboarding */}
@@ -84,9 +82,7 @@ export default function App() {
             <Route path="/blueimpact" element={<BlueImpact />} />
             <Route path="/impact-timeline" element={<ImpactTimeline />} />
             <Route path="/achievements" element={<Achievements />} />
-            <Route path="/virtualocean" element={<VirtualOcean />} />
-            <Route path="/species/:id" element={<SpeciesInfo />} />
-            <Route path="/unlock-species" element={<UnlockSpecies />} />
+
 
             {/* Profile / Settings */}
             <Route path="/profile" element={<Profile />} />
@@ -94,11 +90,10 @@ export default function App() {
 
             {/* Notifications */}
             <Route path="/notifications" element={<Notifications />} />
-            <Route path="/notification-detail" element={<NotificationDetail />} />
           </Routes>
         </div>
 
-        {/* Footer is separate from page content */}
+        {/* Footer fills full width below content */}
         <Footer />
       </div>
     </Router>

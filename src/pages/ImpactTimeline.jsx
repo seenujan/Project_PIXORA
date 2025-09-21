@@ -11,20 +11,40 @@ export default function ImpactTimeline() {
   ];
 
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <Header />
-      <h1>Impact Timeline</h1>
-      <ul>
-        {mockTimeline.map((item, idx) => (
-          <li key={idx}>{item}</li>
-        ))}
-      </ul>
 
-      {/* Back button instead of hyperlink */}
-      <div style={{ marginTop: "20px" }}>
-        <Link to="/blueimpact" style={{ textDecoration: "none" }}>
-          <Button text="Back to My Blue Impact" />
-        </Link>
+      {/* Glassy card container */}
+      <div
+        style={{
+          background: "rgba(255, 255, 255, 0.08)", // glassy effect
+          backdropFilter: "blur(12px)",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
+          borderRadius: "15px",
+          padding: "30px",
+          boxShadow: "0 6px 18px rgba(0,0,0,0.25)",
+          width: "100%",
+          maxWidth: "600px",
+          textAlign: "center",
+          margin: "20px auto"
+        }}
+      >
+        <h1 style={{ fontSize: "24px", color: "#67eee0ff", marginBottom: "20px" }}>
+          Impact Timeline
+        </h1>
+
+        <ul style={{ textAlign: "left", paddingLeft: "20px", color: "white", marginBottom: "25px" }}>
+          {mockTimeline.map((item, idx) => (
+            <li key={idx} style={{ marginBottom: "10px" }}>{item}</li>
+          ))}
+        </ul>
+
+        {/* Back Button */}
+        <div style={{ textAlign: "center" }}>
+          <Link to="/blueimpact" style={{ textDecoration: "none" }}>
+            <Button text="Back to My Blue Impact" />
+          </Link>
+        </div>
       </div>
     </div>
   );

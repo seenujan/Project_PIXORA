@@ -4,34 +4,56 @@ import Button from "../components/Button";
 
 export default function GoalSetting() {
   const [goal, setGoal] = useState("");
-  return (
-    <div>
-      <Header />
-      <h1>Set Personal Goal</h1>
-      <input
-        placeholder="Enter your ocean conservation goal"
-        value={goal}
-        onChange={(e) => setGoal(e.target.value)}
-        style={inputStyle}
-      />
-      <br />
-      <Button text="Save Goal" onClick={() => alert(`Goal saved: ${goal} (mock)`)} />
-      <br />
 
-      {/* Back button instead of hyperlink */}
-      <div style={{ marginTop: "20px" }}>
-        <a href="/profile" style={{ textDecoration: "none" }}>
-          <Button text="Back to Profile" />
-        </a>
+  return (
+    <div style={{ padding: "20px" }}>
+      <Header />
+
+      {/* Glassy Card Container */}
+      <div
+        style={{
+          background: "rgba(255,255,255,0.08)",
+          backdropFilter: "blur(12px)",
+          border: "1px solid rgba(255,255,255,0.2)",
+          borderRadius: "15px",
+          padding: "30px",
+          boxShadow: "0 6px 18px rgba(0,0,0,0.25)",
+          maxWidth: "500px",
+          margin: "20px auto",
+          textAlign: "center"
+        }}
+      >
+        <h1 style={{ color: "#2ec4b6", marginBottom: "20px" }}>Set Personal Goal</h1>
+
+        <input
+          placeholder="Enter your ocean conservation goal"
+          value={goal}
+          onChange={(e) => setGoal(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "12px 16px",
+            borderRadius: "20px",
+            border: "1px solid rgba(255, 255, 255, 0.73)",
+            background: "rgba(255, 255, 255, 0.5)",
+            color: "black",
+            fontSize: "16px",
+            marginBottom: "20px",
+            backdropFilter: "blur(12px)"
+          }}
+        />
+
+        <Button 
+          text="Save Goal" 
+          onClick={() => alert(`Goal saved: ${goal} (mock)`)} 
+        />
+
+        {/* Back to Profile */}
+        <div style={{ marginTop: "20px" }}>
+          <a href="/profile" style={{ textDecoration: "none" }}>
+            <Button text="Back to Profile" />
+          </a>
+        </div>
       </div>
     </div>
   );
 }
-
-const inputStyle = {
-  width: "100%",
-  padding: "10px",
-  borderRadius: "5px",
-  border: "1px solid #0288d1",
-  fontSize: "16px",
-};

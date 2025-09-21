@@ -126,29 +126,7 @@ header h1 {
   font-weight: bold;
 }
 
-/* Glassy Footer */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: var(--marine-blue);
-}
 
-footer a {
-  color: var(--marine-blue);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
 
 /* Modern typography */
 h1,
@@ -158,6 +136,11 @@ h4,
 h5 {
   font-weight: bold;
   color: white;
+}
+
+h2{
+  font-weight: bold;
+  color: rgb(127, 236, 255);
 }
 
 h2 {

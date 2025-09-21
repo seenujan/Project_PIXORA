@@ -6,27 +6,61 @@ import Button from "../components/Button";
 
 export default function CampaignDetail() {
   const { id } = useParams();
-  const campaign = campaigns.find((c) => c.id == id);
+  const campaign = campaigns.find((c) => c.id === id);
+
+  if (!campaign) {
+    return (
+      <div style={{ padding: "20px" }}>
+        <Header />
+        <p>Campaign not found.</p>
+      </div>
+    );
+  }
 
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
+      {/* Header outside the card */}
       <Header />
-      <h1>{campaign.title}</h1>
-      <p>Location: {campaign.location}</p>
-      <p>Date: {campaign.date}</p>
 
-      <div style={{ marginTop: "15px" }}>
-        <Button
-          text="Register"
-          onClick={() => alert("Registered for campaign (mock)!")}
-        />
-      </div>
+      {/* Glassy card container */}
+      <div
+        style={{
+          background: "rgba(255, 255, 255, 0.08)", // glassy effect
+          backdropFilter: "blur(12px)",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
+          borderRadius: "15px",
+          padding: "30px",
+          boxShadow: "0 6px 18px rgba(0,0,0,0.25)",
+          width: "100%",
+          maxWidth: "600px",
+          textAlign: "center",
+          margin: "20px auto"
+        }}
+      >
+        <h1 style={{ fontSize: "24px", color: "#67eee0ff", marginBottom: "15px" }}>
+          {campaign.title}
+        </h1>
 
-      {/* Back button instead of hyperlink */}
-      <div style={{ marginTop: "15px" }}>
-        <Link to="/volunteering" style={{ textDecoration: "none" }}>
-          <Button text="Back to Volunteering" />
-        </Link>
+        <p style={{ fontSize: "16px", color: "#9cff00", marginBottom: "10px" }}>
+          Location: {campaign.location}
+        </p>
+        <p style={{ fontSize: "16px", color: "#9cff00", marginBottom: "20px" }}>
+          Date: {campaign.date}
+        </p>
+
+        {/* Register Button */}
+        <div style={{ marginBottom: "15px" }}>
+          <Link to="/campaign-confirm" style={{ textDecoration: "none" }}>
+            <Button text="Register"/>
+          </Link>
+        </div>
+
+        {/* Back to Volunteering Button */}
+        <div>
+          <Link to="/volunteering" style={{ textDecoration: "none" }}>
+            <Button text="Back to Volunteering" />
+          </Link>
+        </div>
       </div>
     </div>
   );

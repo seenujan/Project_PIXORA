@@ -5,24 +5,45 @@ import Button from "../components/Button";
 
 export default function QuizResult() {
   const { id } = useParams();
+
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
+      {/* Header outside the card */}
       <Header />
-      <h1>Quiz Result</h1>
-      <p>You scored: 80% (mock)</p>
 
-      {/* Review Answers link changed to Button */}
-      <div style={{ marginTop: "20px" }}>
-        <Link to={`/answer-review/${id}`} style={{ textDecoration: "none" }}>
-          <Button text="Review Answers" />
-        </Link>
-      </div>
+      {/* Glassy card for quiz result */}
+      <div
+        style={{
+          background: "rgba(255, 255, 255, 0.08)",   // glassy effect
+          backdropFilter: "blur(12px)",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
+          borderRadius: "15px",
+          padding: "30px",
+          boxShadow: "0 6px 18px rgba(0,0,0,0.25)",
+          width: "100%",
+          maxWidth: "500px",
+          textAlign: "center",
+          margin: "20px auto"   // center the card with vertical spacing
+        }}
+      >
+        <h1 style={{ color: "#2ec4b6", marginBottom: "15px" }}>Quiz Result</h1>
+        <p style={{ fontSize: "16px", color: "#9cff00", marginBottom: "25px" }}>
+          You scored: 80%
+        </p>
 
-      {/* Back to Home link changed to Button */}
-      <div style={{ marginTop: "10px" }}>
-        <Link to="/home" style={{ textDecoration: "none" }}>
-          <Button text="Back to Home" />
-        </Link>
+        {/* Review Answers Button */}
+        <div style={{ marginBottom: "15px" }}>
+          <Link to={`/answer-review/${id}`} style={{ textDecoration: "none" }}>
+            <Button text="Review Answers" />
+          </Link>
+        </div>
+
+        {/* Back to Quiz Selection Button */}
+        <div>
+          <Link to="/quiz-selection" style={{ textDecoration: "none" }}>
+            <Button text="Back Quiz Selection" />
+          </Link>
+        </div>
       </div>
     </div>
   );

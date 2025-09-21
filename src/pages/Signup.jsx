@@ -5,8 +5,8 @@ import Button from "../components/Button";
 
 export default function Signup() {
   const navigate = useNavigate(); // navigation hook
-  const [name, setName] = useState("Jane Doe");
-  const [email, setEmail] = useState("jane@example.com");
+  const [name, setName] = useState("Pixora");
+  const [email, setEmail] = useState("Pixora@example.com");
   const [password, setPassword] = useState("password123");
 
   const handleSignup = (e) => {
@@ -23,11 +23,11 @@ export default function Signup() {
         onSubmit={handleSignup}
         style={{ maxWidth: "400px", margin: "0 auto", textAlign: "left" }}
       >
-        <div style={{ marginBottom: "2px" }}>
+        <div style={{ marginBottom: "10px" }}>
           <label
             style={{
               display: "block",
-              marginBottom: "3px",
+              marginBottom: "5px",
               fontWeight: "bold",
             }}
           >
@@ -41,11 +41,11 @@ export default function Signup() {
             style={inputStyle}
           />
         </div>
-        <div style={{ marginBottom: "2px" }}>
+        <div style={{ marginBottom: "10px" }}>
           <label
             style={{
               display: "block",
-              marginBottom: "3px",
+              marginBottom: "5px",
               fontWeight: "bold",
             }}
           >
@@ -59,11 +59,11 @@ export default function Signup() {
             style={inputStyle}
           />
         </div>
-        <div style={{ marginBottom: "2px" }}>
+        <div style={{ marginBottom: "10px" }}>
           <label
             style={{
               display: "block",
-              marginBottom: "3px",
+              marginBottom: "5px",
               fontWeight: "bold",
             }}
           >
@@ -77,16 +77,15 @@ export default function Signup() {
             style={inputStyle}
           />
         </div>
-        <div style={{ textAlign: "center", marginTop: "5px" }}>
+        <div style={{ textAlign: "center", marginTop: "10px" }}>
           <Button text="Sign Up" onClick={handleSignup} />
         </div>
       </form>
 
       <p style={{ marginTop: "20px" }}>Already have an account?</p>
       <div style={{ marginTop: "10px" }}>
-        {/* Login as button instead of hyperlink */}
-        <Link to="/login" style={{ textDecoration: "none" }}>
-          <Button text="Login" />
+        <Link to="/login" style={{ color: "#074d86ff", textDecoration: "underline" }}>
+          Login
         </Link>
       </div>
     </div>
@@ -97,6 +96,6 @@ const inputStyle = {
   width: "100%",
   padding: "10px",
   borderRadius: "5px",
-  border: "1px solid #0288d1",
+  border: "1px solid #cbdce5ff",
   fontSize: "16px",
 };

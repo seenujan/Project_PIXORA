@@ -6,7 +6,7 @@ export default function Home() {
     <div style={{ padding: "20px" }}>
       <Header />
 
-      <h1>Welcome to OceanEcho Dashboard</h1>
+      <h1>Welcome to OceanEcho</h1>
 
       {/* Virtual Ocean Health */}
       <div style={boxStyle}>
@@ -41,10 +41,14 @@ export default function Home() {
 
 // Styles
 const boxStyle = {
-  background: "#e0f7fa",
+  background: "rgba(255, 255, 255, 0.08)", // semi-transparent glassy
+  backdropFilter: "blur(12px)",           // blur effect
+  border: "1px solid rgba(255, 255, 255, 0.2)", // subtle border
+  borderRadius: "15px",
   padding: "15px",
-  borderRadius: "10px",
   marginBottom: "20px",
-  color: "#01579b",
-  lineHeight: "1.6"
+  color: "white",                          // text color for contrast
+  lineHeight: "1.6",
+  boxShadow: "0 6px 18px rgba(0,0,0,0.25)" // shadow for depth
 };
+
