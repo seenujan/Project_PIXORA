@@ -95,7 +95,7 @@ export default function Profile() {
           <h3 style={{ color: "#67eee0ff", marginBottom: "10px" }}>Recent Activity</h3>
           <ul style={{ listStyle: "none", padding: 0 }}>
             {mockUser.recentActivity.map((act, idx) => (
-              <li key={idx} style={{ background: "rgba(255,255,255,0.08)", borderRadius: "10px", padding: "10px", marginBottom: "10px", color: "white" }}>
+              <li key={idx} style={{ background: "rgba(255,255,255,0.08)", borderRadius: "10px", padding: "10px", marginBottom: "10px", color: "black" }}>
                 🌊 {act}
               </li>
             ))}

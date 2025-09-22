@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Button from "../components/Button";
+import { toast } from "react-toastify"; // ✅ Import toast
 
 export default function GoalSetting() {
   const [goal, setGoal] = useState("");
+
+  const handleSaveGoal = () => {
+    if (goal.trim() === "") {
+      toast.error("⚠️ Please enter a goal before saving!");
+    } else {
+      toast.success(`🎯 Goal saved successfully! "${goal}"`);
+    }
+  };
 
   return (
     <div style={{ padding: "20px" }}>
@@ -20,10 +29,12 @@ export default function GoalSetting() {
           boxShadow: "0 6px 18px rgba(0,0,0,0.25)",
           maxWidth: "500px",
           margin: "20px auto",
-          textAlign: "center"
+          textAlign: "center",
         }}
       >
-        <h1 style={{ color: "#2ec4b6", marginBottom: "20px" }}>Set Personal Goal</h1>
+        <h1 style={{ color: "#2ec4b6", marginBottom: "20px" }}>
+          Set Personal Goal
+        </h1>
 
         <input
           placeholder="Enter your ocean conservation goal"
@@ -38,14 +49,12 @@ export default function GoalSetting() {
             color: "black",
             fontSize: "16px",
             marginBottom: "20px",
-            backdropFilter: "blur(12px)"
+            backdropFilter: "blur(12px)",
           }}
         />
 
-        <Button 
-          text="Save Goal" 
-          onClick={() => alert(`Goal saved succesfully! ${goal}`)} 
-        />
+        {/* Save Goal Button */}
+        <Button text="Save Goal" onClick={handleSaveGoal} />
 
         {/* Back to Profile */}
         <div style={{ marginTop: "20px" }}>

@@ -7,12 +7,12 @@ import Button from "../components/Button";
 const reviewQuestions = [
   { 
     q: "Percentage of ocean pollution from plastic?", 
-    options: ["50%", "80%", "60%"], 
+    options: ["(a) 50%", "(b) 80%", "(c) 60%"], 
     answer: "80%" 
   },
   { 
     q: "Which animal is most affected by plastic?", 
-    options: ["Turtle", "Whale", "Seagull"], 
+    options: ["(a) Turtle", "(b) Whale", "(c) Seagull"], 
     answer: "Turtle" 
   }
 ];
@@ -42,7 +42,7 @@ export default function AnswerReview() {
 
         {/* Questions & Correct Answers */}
         {reviewQuestions.map((item, idx) => (
-          <div key={idx} style={{ marginBottom: "20px" }}>
+          <div key={idx} style={{ textAlign: "left",marginBottom: "20px" }}>
             <p style={{ fontSize: "16px", color: "white", marginBottom: "10px" }}>
               {idx + 1}. {item.q}
             </p>

@@ -1,6 +1,8 @@
 import React from "react";
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";   // ✅ Import ToastContainer
+import "react-toastify/dist/ReactToastify.css";   // ✅ Import styles
 
 // Splash / Onboarding
 import Splash from "./pages/Splash";
@@ -83,7 +85,6 @@ export default function App() {
             <Route path="/impact-timeline" element={<ImpactTimeline />} />
             <Route path="/achievements" element={<Achievements />} />
 
-
             {/* Profile / Settings */}
             <Route path="/profile" element={<Profile />} />
             <Route path="/goal-setting" element={<GoalSetting />} />
@@ -95,6 +96,9 @@ export default function App() {
 
         {/* Footer fills full width below content */}
         <Footer />
+
+        {/* ✅ Toast container added globally */}
+        <ToastContainer position="top-right" autoClose={3000} />
       </div>
     </Router>
   );

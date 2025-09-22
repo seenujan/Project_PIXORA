@@ -45,7 +45,7 @@ export default function Header() {
               top: "60px",
               right: "20px",
               background: "#1da0e7ff",
-              borderRadius: "5px",
+              borderRadius: "20px",
               padding: "10px",
               width: "180px",
               zIndex: 1000,
@@ -92,4 +92,5 @@ const menuItemStyle = {
   borderRadius: "3px",
   transition: "background 0.2s ease",
   marginBottom: "5px"
+  
 };

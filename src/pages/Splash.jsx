@@ -26,19 +26,19 @@ export default function Splash() {
         <div style={{ fontSize: "50px", marginBottom: "15px" }}>🌊🐢</div>
 
         <h1 style={{ color: "#5feee0ff", fontSize: "30px", marginBottom: "15px" }}>
-          Welcome to OceanEcho 🌟
+          Welcome to OceanEcho
         </h1>
 
-        <p style={{ fontSize: "16px", color: "white", marginBottom: "25px" }}>
-          Explore, learn, and take action to protect our oceans 🐠🐋.
+        <p style={{ fontSize: "20px", color: "white", marginBottom: "25px" }}>
+          <b>Explore, learn, and take action to protect our oceans 🐠🐋.</b>
         </p>
 
         {/* App Features (Centered) */}
-        <div style={{ fontSize: "16px", marginBottom: "25px", lineHeight: "2" }}>
-          <p>📝 Learn about ocean pollution and marine life</p>
-          <p>🏖️ Participate in missions and volunteering campaigns</p>
-          <p>📊 Track your personal impact and achievements</p>
-          <p>🐢 Interact with a virtual ocean ecosystem</p>
+        <div style={{ fontSize: "16px", color: "black", marginBottom: "25px", lineHeight: "2" }}>
+          <p><b>📝 Learn about ocean pollution and marine life</b></p>
+          <p><b>🏖️ Participate in missions and volunteering campaigns</b></p>
+          <p><b>📊 Track your personal impact and achievements</b></p>
+          <p><b>🐢 Interact with a virtual ocean ecosystem</b></p>
         </div>
 
         {/* Login / Sign Up Buttons */}

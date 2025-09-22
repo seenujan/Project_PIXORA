@@ -7,7 +7,7 @@ export default function QuizResult() {
   const { id } = useParams();
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{  padding: "20px" }}>
       {/* Header outside the card */}
       <Header />
 

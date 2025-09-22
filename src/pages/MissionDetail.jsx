@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { missions } from "../mockData/missions";
 import Header from "../components/Header";
 import Button from "../components/Button";
+import { toast } from "react-toastify"; // ✅ Import toast
 
 export default function MissionDetail() {
   const { id } = useParams();
@@ -16,6 +17,11 @@ export default function MissionDetail() {
       </div>
     );
   }
+
+  // ✅ Replace alert with toast
+  const handleComplete = () => {
+    toast.success("🎉 Mission Completed!");
+  };
 
   return (
     <div style={{ padding: "20px", display: "flex", justifyContent: "center" }}>
@@ -44,10 +50,7 @@ export default function MissionDetail() {
 
         {/* Mark Complete Button */}
         <div style={{ marginBottom: "20px" }}>
-          <Button
-            text="Mark Complete"
-            onClick={() => alert("Mission Completed!")}
-          />
+          <Button text="Mark Complete" onClick={handleComplete} />
         </div>
 
         {/* Back to Home Button */}

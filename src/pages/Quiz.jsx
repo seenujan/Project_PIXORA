@@ -42,10 +42,10 @@ export default function Quiz() {
 
         {quiz.questions.map((q, idx) => (
           <div key={idx} style={{ marginBottom: "20px" }}>
-            <p style={{ fontSize: "16px", color: "white", marginBottom: "10px" }}>
+            <p style={{ textAlign: "left", fontSize: "16px", color: "white", marginBottom: "10px" }}>
               {q.q}
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            <div style={{ textAlign: "left", display: "flex", flexDirection: "column", gap: "10px" }}>
               {q.options.map((o) => (
                 <label key={o} style={{ fontSize: "14px", color: "#9cff00" }}>
                   <input
